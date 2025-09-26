@@ -32,3 +32,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, 12)
 
 	move_and_slide()
+
+
+func _on_bounds_box_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
