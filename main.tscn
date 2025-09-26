@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://fam8ttro2cqc"]
+[gd_scene load_steps=14 format=4 uid="uid://fam8ttro2cqc"]
 
 [ext_resource type="Script" uid="uid://dmn88s2doskhn" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cwuiuvxdadtw7" path="res://Untitled design (2) (1).png" id="1_lquwl"]
@@ -1250,6 +1250,9 @@ sources/3 = SubResource("TileSetAtlasSource_272bh")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(44, 52)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(9818, 134)
+
 [node name="Node" type="Node"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -1361,79 +1364,6 @@ texture = ExtResource("1_lquwl")
 position = Vector2(-969.63824, -2.527237e-05)
 texture = ExtResource("1_lquwl")
 
-[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(2446.0205, 607.7211)
-scale = Vector2(2.6666648, 2.541666)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D6"]
-position = Vector2(240, 1.31726265e-05)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D2"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Sprite2D6"]
-position = Vector2(240, 9.894371e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D3"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D3"]
-position = Vector2(240, 1.31726265e-05)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D3/Sprite2D2"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D3/Sprite2D2/Sprite2D"]
-position = Vector2(-969.63824, -2.527237e-05)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D/Sprite2D6"]
-position = Vector2(1219.537, 5.9604645e-07)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4"]
-position = Vector2(240, 1.31726265e-05)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4/Sprite2D2"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4"]
-position = Vector2(240, 9.894371e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4/Sprite2D3"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4/Sprite2D3"]
-position = Vector2(240, 1.31726265e-05)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4/Sprite2D3/Sprite2D2"]
-position = Vector2(240, 3.33786e-06)
-texture = ExtResource("1_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D6/Sprite2D4/Sprite2D3/Sprite2D2/Sprite2D"]
-position = Vector2(-969.63824, -2.527237e-05)
-texture = ExtResource("1_lquwl")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(1, 18)
 scale = Vector2(3, 3)
@@ -1461,3 +1391,13 @@ position_smoothing_speed = 7.0
 stream = ExtResource("7_272bh")
 autoplay = true
 parameters/looping = true
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(1, 172)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1276, 1477)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1777, -498)
+shape = SubResource("RectangleShape2D_272bh")
